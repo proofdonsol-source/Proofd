@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Added font-medium for thicker text, and better font-smoothing */
+    @apply bg-navy text-white font-body font-medium antialiased text-base selection:bg-blue-primary/30 selection:text-blue-light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+@layer components {
+  .proofd-card {
+    @apply bg-surface-2 border border-navy-light rounded-2xl shadow-card;
+  }
+  .bg-blue-gradient {
+    @apply bg-gradient-to-br from-blue-light via-blue-primary to-blue-deep;
+  }
+  .shadow-glow-sm {
+    @apply shadow-[0_0_15px_rgba(59,130,246,0.3)];
+  }
+}
