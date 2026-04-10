@@ -1,20 +1,20 @@
 "use client";
 
-import { PrivyProvider } from '@privy-io/react-auth';
+import { PrivyProvider } from "@privy-io/react-auth";
 
-export default function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <PrivyProvider
-      appId="cmnbzddyz000s0cjovrjdu5mk"
+      appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID as string}
       config={{
-        loginMethods: ['github', 'email', 'wallet'],
         appearance: {
-          theme: 'dark',
-          accentColor: '#3B82F6', // Proofd Blue
-          showWalletLoginFirst: false,
+          theme: "dark",
+          accentColor: "#3b82f6",
         },
         embeddedWallets: {
-          createOnLogin: 'users-without-wallets', // Auto-creates wallets for email/github users
+          ethereum: {
+            createOnLogin: "users-without-wallets", // Auto-creates Ethereum wallets
+          },
         },
       }}
     >
