@@ -5,10 +5,7 @@ import { PrivyProvider } from "@privy-io/react-auth";
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <PrivyProvider
-      <PrivyProvider
-  appId="cmnbzddyz000s0cjovrjdu5mk" // <-- YOUR REAL ID GOES HERE IN QUOTES
-  config={{
-    // ... the rest stays the same
+      appId="cmnbzddyz000s0cjovrjdu5mk"
       config={{
         appearance: {
           theme: "dark",
@@ -16,7 +13,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         },
         embeddedWallets: {
           ethereum: {
-            createOnLogin: "users-without-wallets", // Auto-creates Ethereum wallets
+            createOnLogin: "users-without-wallets",
           },
         },
       }}
