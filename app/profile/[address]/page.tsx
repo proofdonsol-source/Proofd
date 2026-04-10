@@ -20,7 +20,7 @@ export default function ProfilePage() {
   const targetAddress = profileAddress === 'me' ? currentUserAddress : profileAddress;
   const isOwner = currentUserAddress?.toLowerCase() === targetAddress?.toLowerCase();
 
-  // Baseline Initial Dev (Zero hardcoded placeholders)
+  // Baseline Initial Dev with TypeScript fix
   const initialDev = {
     address: targetAddress || "0x00...000",
     ens: "",
@@ -35,7 +35,7 @@ export default function ProfilePage() {
     skills: ["Web3"],
     stats: { bounties: 0 },
     socials: { github: "", twitter: "" },
-    projects: [] // Wiped completely clean.
+    projects: [] as any[] // Fixes the TypeScript "never" error
   };
 
   const [dev, setDev] = useState(initialDev);
@@ -477,4 +477,4 @@ export default function ProfilePage() {
       <Footer />
     </>
   );
-}s
+}
