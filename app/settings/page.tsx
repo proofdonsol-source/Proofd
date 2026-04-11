@@ -127,7 +127,7 @@ export default function SettingsPage() {
                         </div>
                         <div>
                           <div className="font-display font-bold text-white text-sm">Email Address</div>
-                          <div className="font-mono-brand text-xs text-slate-muted">user@gmail.com</div>
+                          <div className="font-mono-brand text-xs text-slate-muted">user</div>
                         </div>
                       </div>
                       <span className="flex items-center gap-1 font-mono-brand text-[10px] text-emerald-400 uppercase tracking-widest px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/20">
