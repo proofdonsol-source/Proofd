@@ -111,7 +111,7 @@ export default function SettingsPage() {
                         </div>
                         <div>
                           <div className="font-display font-bold text-white text-sm">GitHub</div>
-                          <div className="font-mono-brand text-xs text-slate-muted">Connected as @khalydmaina</div>
+                          <div className="font-mono-brand text-xs text-slate-muted">Connected as @USER</div>
                         </div>
                       </div>
                       <button className="px-4 py-2 rounded-lg font-mono-brand text-xs text-slate-muted border border-navy-light hover:text-white hover:bg-surface-2 transition-colors">
